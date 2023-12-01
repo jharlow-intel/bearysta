@@ -61,7 +61,7 @@ def run_benchmark(env, config, run_path='runs', run_id=None, commands=None,
         progress_inside = '{} ({}/{}) in {}'.format(endpoint, i+1, ncommands, progress)
         print('### Running benchmark endpoint', progress_inside)
 
-        if commands is not None and endpoint not in commands:
+        if commands is not None and 'run_all' not in commands and endpoint not in commands:
             print('[skipped this endpoint]')
             print(commands)
             print(endpoint)
