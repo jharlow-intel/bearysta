@@ -63,6 +63,8 @@ def run_benchmark(env, config, run_path='runs', run_id=None, commands=None,
 
         if commands is not None and endpoint not in commands:
             print('[skipped this endpoint]')
+            print(commands)
+            print(endpoint)
             continue
 
         var_matrix = deepcopy(bench['variables'])
